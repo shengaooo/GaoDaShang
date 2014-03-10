@@ -1,6 +1,6 @@
 package message.req;
 
-public class LocationMessage {
+public class LocationMessage extends BaseRequest{
     // ??????   
     private String Location_X;  
     // ??????   

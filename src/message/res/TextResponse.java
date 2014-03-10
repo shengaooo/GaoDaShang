@@ -1,14 +1,13 @@
-package message.req;
+package message.res;
 
-public class TextMessage extends BaseRequest {
-    // æ¶ˆæ�¯å†…å®¹   
+public class TextResponse extends BaseResponse{
     private String Content;  
-  
+	  
     public String getContent() {  
         return Content;  
     }  
   
     public void setContent(String content) {  
         Content = content;  
-    }
+    }  
 }

@@ -1,6 +1,6 @@
 package message.req;
 
-public class LinkMessage {
+public class LinkMessage extends BaseRequest{
     // ????   
     private String Title;  
     // ????   

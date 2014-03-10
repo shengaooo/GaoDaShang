@@ -14,7 +14,7 @@ public class CoreServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-		System.out.println("This is for test");
+		System.out.println("This is for test for webchat");
 		
 		String signature = request.getParameter("signature");  
 		String timestamp = request.getParameter("timestamp");  
@@ -33,7 +33,9 @@ public class CoreServlet extends HttpServlet {
 	}
 	
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
-        // TODO ???????????   
+        // TODO ???????????  
+    	
+        // TODO   
     }  
 
 	

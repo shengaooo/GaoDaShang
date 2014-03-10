@@ -1,6 +1,6 @@
 package message.req;
 
-public class ImageMessage {
+public class ImageMessage extends BaseRequest{
     //图片链接     
     private String PicUrl;  
   

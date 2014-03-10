@@ -1,6 +1,6 @@
 package message.req;
 
-public class VoiceMessage {
+public class VoiceMessage extends BaseRequest{
     // ??ID   
     private String MediaId;  
     // ????   
