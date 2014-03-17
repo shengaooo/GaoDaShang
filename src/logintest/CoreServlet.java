@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
+
+import service.CoreService;
 import util.SignUtil;
 
 public class CoreServlet extends HttpServlet {
@@ -32,10 +36,16 @@ public class CoreServlet extends HttpServlet {
 		out = null;  
 	}
 	
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
-        // TODO ???????????  
-    	
-        // TODO   
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {      	
+
+        request.setCharacterEncoding("UTF-8");  
+        response.setCharacterEncoding("UTF-8");  
+        
+        String respMessage = CoreService.processRequest(request); 
+        // 响应消息   
+        PrintWriter out = response.getWriter();  
+        out.print(respMessage);  
+        out.close();  
     }  
 
 	

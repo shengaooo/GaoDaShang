@@ -35,4 +35,20 @@ public class BaseResponse {
     public void setCreateTime(long createTime) {  
         CreateTime = createTime;  
     }  
+    
+    public String getMsgType() {  
+        return MsgType;  
+    }  
+  
+    public void setMsgType(String msgType) {  
+        MsgType = msgType;  
+    }  
+  
+    public int getFuncFlag() {  
+        return FuncFlag;  
+    }  
+  
+    public void setFuncFlag(int funcFlag) {  
+        FuncFlag = funcFlag;  
+    }  
 }
