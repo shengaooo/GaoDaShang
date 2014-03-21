@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2014 4:30:53 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="database.PlaceOrder" table="PlaceOrder" catalog="HighBigUp">
+        <id name="orderId" type="java.lang.Integer">
+            <column name="OrderID" />
+            <generator class="identity" />
+        </id>
+        <property name="tableId" type="java.lang.Integer">
+            <column name="TableID" />
+        </property>
+        <property name="orderCount" type="java.lang.Integer">
+            <column name="OrderCount" />
+        </property>
+        <property name="orderTime" type="timestamp">
+            <column name="OrderTime" length="19" />
+        </property>
+        <property name="obsoleTime" type="timestamp">
+            <column name="ObsoleTime" length="19" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+        </property>
+        <property name="orderList" type="string">
+            <column name="OrderList" />
+        </property>
+        <property name="prepaidAmount" type="java.lang.Double">
+            <column name="PrepaidAmount" precision="22" scale="0" />
+        </property>
+        <property name="totalAmout" type="java.lang.Double">
+            <column name="TotalAmout" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

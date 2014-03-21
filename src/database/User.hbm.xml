@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2014 4:30:53 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="database.User" table="User" catalog="HighBigUp">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+            <generator class="identity" />
+        </id>
+        <property name="userAddress" type="string">
+            <column name="UserAddress" length="200" not-null="true" />
+        </property>
+        <property name="userName" type="string">
+            <column name="UserName" length="200" not-null="true" />
+        </property>
+        <property name="mobileNumber" type="string">
+            <column name="MobileNumber" length="200" not-null="true" />
+        </property>
+        <property name="userGrade" type="java.lang.Integer">
+            <column name="UserGrade" />
+        </property>
+        <property name="jiFen" type="java.lang.Integer">
+            <column name="JiFen" />
+        </property>
+        <property name="userPaid" type="java.lang.Double">
+            <column name="UserPaid" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

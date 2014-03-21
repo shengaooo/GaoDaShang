@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2014 4:30:53 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="database.UserHabbit" table="UserHabbit" catalog="HighBigUp">
+        <id name="habbitId" type="java.lang.Integer">
+            <column name="HabbitID" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+        </property>
+        <property name="menuId" type="java.lang.Integer">
+            <column name="MenuID" />
+        </property>
+        <property name="hitCounter" type="java.lang.Integer">
+            <column name="HitCounter" />
+        </property>
+    </class>
+</hibernate-mapping>

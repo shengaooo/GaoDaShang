@@ -1,0 +1,174 @@
+[INFO ] 2014-03-21 14:55:10,229 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 14:55:10,235                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 14:55:10,241         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 14:55:10,241         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 14:55:10,317 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 14:56:45,565 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 14:56:45,571                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 14:56:45,574         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 14:56:45,575         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 14:56:45,635 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 14:58:15,333 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 14:58:15,340                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 14:58:15,342         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 14:58:15,343         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 14:58:15,407 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 15:01:24,736 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:01:24,743                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:01:24,746         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:01:24,747         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 15:01:24,806 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 15:01:33,765 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:01:33,771                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:01:33,774         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:01:33,774         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 15:01:33,833 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 15:04:01,377 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:04:01,384                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:04:01,387         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:04:01,387         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 15:04:01,453 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 15:05:34,936 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:05:34,942                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:05:34,945         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:05:34,946         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [WARN ] 2014-03-21 15:05:35,013 org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator     - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+  [INFO ] 2014-03-21 15:10:24,915 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:10:24,921                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:10:24,925         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:10:24,925         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 15:10:24,944       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 15:10:24,944       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 15:10:25,340 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 15:10:25,363       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 15:10:25,401 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 15:10:25,434 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 15:10:25,435 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 15:10:25,435 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/highbigup]
+  [INFO ] 2014-03-21 15:10:25,435 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+  [INFO ] 2014-03-21 15:10:26,293         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 15:10:26,355 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2014-03-21 15:10:26,360 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+  [INFO ] 2014-03-21 15:15:21,073 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:15:21,079                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:15:21,083         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:15:21,083         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 15:15:21,104       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 15:15:21,104       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 15:15:21,148 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 15:15:21,168       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Restaurantinformation.hbm.xml
+  [INFO ] 2014-03-21 15:15:21,481       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 15:15:21,521 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 15:15:21,527 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 15:15:21,527 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 15:15:21,528 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/highbigup]
+  [INFO ] 2014-03-21 15:15:21,528 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+  [INFO ] 2014-03-21 15:15:21,822         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 15:17:20,037 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:17:20,044                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:17:20,047         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:17:20,047         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 15:17:20,068       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 15:17:20,068       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 15:17:20,115 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 15:17:20,134       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Restaurantinformation.hbm.xml
+  [INFO ] 2014-03-21 15:17:20,185       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 15:17:20,225 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 15:17:20,231 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 15:17:20,231 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 15:17:20,232 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/highbigup]
+  [INFO ] 2014-03-21 15:17:20,232 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+  [INFO ] 2014-03-21 15:17:20,501         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 15:18:22,099 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 15:18:22,105                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 15:18:22,108         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 15:18:22,108         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 15:18:22,127       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 15:18:22,128       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 15:18:22,183 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 15:18:22,208       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Menulist.hbm.xml
+  [INFO ] 2014-03-21 15:18:22,254       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Placeorder.hbm.xml
+  [INFO ] 2014-03-21 15:18:22,271       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/User.hbm.xml
+  [INFO ] 2014-03-21 15:18:22,284       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Userhabbit.hbm.xml
+  [INFO ] 2014-03-21 15:18:22,295       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/Restaurantinformation.hbm.xml
+  [INFO ] 2014-03-21 15:18:22,304       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 15:18:22,345 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 15:18:22,351 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 15:18:22,351 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 15:18:22,352 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/highbigup]
+  [INFO ] 2014-03-21 15:18:22,352 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+  [INFO ] 2014-03-21 15:18:22,605         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 15:18:22,705 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2014-03-21 15:18:22,709 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+  [INFO ] 2014-03-21 16:45:22,888 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 16:45:22,894                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 16:45:22,902         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 16:45:22,903         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 16:45:22,922       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 16:45:22,922       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 16:45:23,210 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 16:45:23,235       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/MenuList.hbm.xml
+  [INFO ] 2014-03-21 16:45:23,395       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/PlaceOrder.hbm.xml
+  [INFO ] 2014-03-21 16:45:23,411       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/User.hbm.xml
+  [INFO ] 2014-03-21 16:45:23,443       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/UserHabbit.hbm.xml
+  [INFO ] 2014-03-21 16:45:23,453       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/RestaurantInformation.hbm.xml
+  [INFO ] 2014-03-21 16:45:23,471       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 16:45:23,545 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 16:45:23,565 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 16:45:23,565 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 16:45:23,565 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/HighBigUp]
+  [INFO ] 2014-03-21 16:45:23,565 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=ODBC, password=****}
+  [WARN ] 2014-03-21 16:45:24,432 org.hibernate.engine.jdbc.internal.JdbcServicesImpl     - HHH000342: Could not obtain connection to query metadata : Access denied for user 'ODBC'@'localhost' to database 'HighBigUp'
+  [INFO ] 2014-03-21 16:45:24,440         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 16:45:24,448 org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000422: Disabling contextual LOB creation as connection was null
+  [INFO ] 2014-03-21 16:45:24,506 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2014-03-21 16:45:24,514 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+  [WARN ] 2014-03-21 16:45:24,982 org.hibernate.engine.jdbc.spi.SqlExceptionHelper     - SQL Error: 1044, SQLState: 42000
+  [ERROR] 2014-03-21 16:45:24,982 org.hibernate.engine.jdbc.spi.SqlExceptionHelper     - Access denied for user 'ODBC'@'localhost' to database 'HighBigUp'
+  [INFO ] 2014-03-21 16:45:57,429 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 16:45:57,435                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 16:45:57,438         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 16:45:57,439         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 16:45:57,457       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 16:45:57,457       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 16:45:57,500 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 16:45:57,519       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/MenuList.hbm.xml
+  [INFO ] 2014-03-21 16:45:57,566       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/PlaceOrder.hbm.xml
+  [INFO ] 2014-03-21 16:45:57,584       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/User.hbm.xml
+  [INFO ] 2014-03-21 16:45:57,596       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/UserHabbit.hbm.xml
+  [INFO ] 2014-03-21 16:45:57,605       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/RestaurantInformation.hbm.xml
+  [INFO ] 2014-03-21 16:45:57,613       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 16:45:57,655 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 16:45:57,661 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 16:45:57,661 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 16:45:57,662 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/HighBigUp]
+  [INFO ] 2014-03-21 16:45:57,662 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=ODBC}
+  [WARN ] 2014-03-21 16:45:57,862 org.hibernate.engine.jdbc.internal.JdbcServicesImpl     - HHH000342: Could not obtain connection to query metadata : Access denied for user 'ODBC'@'localhost' to database 'HighBigUp'
+  [INFO ] 2014-03-21 16:45:57,870         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 16:45:57,877 org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000422: Disabling contextual LOB creation as connection was null
+  [INFO ] 2014-03-21 16:45:57,937 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2014-03-21 16:45:57,941 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+  [WARN ] 2014-03-21 16:45:58,207 org.hibernate.engine.jdbc.spi.SqlExceptionHelper     - SQL Error: 1044, SQLState: 42000
+  [ERROR] 2014-03-21 16:45:58,207 org.hibernate.engine.jdbc.spi.SqlExceptionHelper     - Access denied for user 'ODBC'@'localhost' to database 'HighBigUp'
+  [INFO ] 2014-03-21 16:48:29,816 org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+  [INFO ] 2014-03-21 16:48:29,822                 org.hibernate.Version     - HHH000412: Hibernate Core {4.2.11.Final}
+  [INFO ] 2014-03-21 16:48:29,826         org.hibernate.cfg.Environment     - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+  [INFO ] 2014-03-21 16:48:29,826         org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+  [INFO ] 2014-03-21 16:48:29,844       org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2014-03-21 16:48:29,845       org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+  [WARN ] 2014-03-21 16:48:29,890 org.hibernate.internal.util.xml.DTDEntityResolver     - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+  [INFO ] 2014-03-21 16:48:29,909       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/MenuList.hbm.xml
+  [INFO ] 2014-03-21 16:48:29,970       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/PlaceOrder.hbm.xml
+  [INFO ] 2014-03-21 16:48:29,986       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/User.hbm.xml
+  [INFO ] 2014-03-21 16:48:30,002       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/UserHabbit.hbm.xml
+  [INFO ] 2014-03-21 16:48:30,012       org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: database/RestaurantInformation.hbm.xml
+  [INFO ] 2014-03-21 16:48:30,031       org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+  [WARN ] 2014-03-21 16:48:30,088 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2014-03-21 16:48:30,097 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+  [INFO ] 2014-03-21 16:48:30,097 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+  [INFO ] 2014-03-21 16:48:30,097 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/HighBigUp]
+  [INFO ] 2014-03-21 16:48:30,098 org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=ODBC, password=****}
+  [INFO ] 2014-03-21 16:48:30,455         org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+  [INFO ] 2014-03-21 16:48:30,542 org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2014-03-21 16:48:30,547 org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+  

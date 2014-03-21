@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2014 4:30:53 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="database.MenuList" table="MenuList" catalog="HighBigUp">
+        <id name="menuId" type="java.lang.Integer">
+            <column name="MenuID" />
+            <generator class="identity" />
+        </id>
+        <property name="restaurantId" type="java.lang.Integer">
+            <column name="RestaurantID" />
+        </property>
+        <property name="mealSetHitCount" type="java.lang.Integer">
+            <column name="MealSetHitCount" />
+        </property>
+        <property name="isNew" type="java.lang.Byte">
+            <column name="IsNew" />
+        </property>
+        <property name="menuImagesPath" type="string">
+            <column name="MenuImagesPath" />
+        </property>
+        <property name="mealSetName" type="string">
+            <column name="MealSetName" length="200" />
+        </property>
+        <property name="mealSetDescription" type="string">
+            <column name="MealSetDescription" />
+        </property>
+        <property name="mealSetPrice" type="java.lang.Double">
+            <column name="MealSetPrice" precision="22" scale="0" />
+        </property>
+        <property name="mealSetDiscount" type="java.lang.Double">
+            <column name="MealSetDiscount" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
