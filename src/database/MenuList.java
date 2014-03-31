@@ -20,7 +20,7 @@ public class MenuList implements java.io.Serializable {
 	public MenuList() {
 	}
 
-	public MenuList(Integer restaurantId, Integer mealSetHitCount, Byte isNew,
+	protected MenuList(Integer restaurantId, Integer mealSetHitCount, Byte isNew,
 			String menuImagesPath, String mealSetName,
 			String mealSetDescription, Double mealSetPrice,
 			Double mealSetDiscount) {
