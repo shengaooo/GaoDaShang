@@ -6,9 +6,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session; 
 import org.hibernate.Transaction;
 
-import database.MenuList;
-
-
 public class MenuListManager extends TableManager {
 	public Integer AddMenuList(Integer restaurantId, Integer mealSetHitCount, Byte isNew,
 			                   String menuImagesPath, String mealSetName,
@@ -70,10 +67,10 @@ public class MenuListManager extends TableManager {
 		}
 	}
 	
-	public Integer UpdateMenuList(Integer menuID, Integer restaurantId, Integer mealSetHitCount, Byte isNew,
-            String menuImagesPath, String mealSetName,
-            String mealSetDescription, Double mealSetPrice,
-            Double mealSetDiscount) {		
+	public void UpdateMenuList(Integer menuID, Integer restaurantId, Integer mealSetHitCount, Byte isNew,
+					           String menuImagesPath, String mealSetName,
+					           String mealSetDescription, Double mealSetPrice,
+					           Double mealSetDiscount) {		
 		Session session = mySessionFactory.openSession();
 		Transaction tx = null;
 		
@@ -98,7 +95,6 @@ public class MenuListManager extends TableManager {
 		} finally {
 			session.close();
 		}		
-		return menuID;		
-		}	
+	}	
 	
-	}
+}
