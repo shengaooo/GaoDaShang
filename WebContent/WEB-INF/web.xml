@@ -9,12 +9,26 @@
             logintest.CoreServlet  
 	        </servlet-class>  
 	</servlet>  
-	  
+	
+	<servlet>  
+        <servlet-name>webTestServlet</servlet-name>  
+        <servlet-class>  
+            logintest.WebTestServlet  
+	        </servlet-class>  
+	</servlet>  
+	
 	    <servlet-mapping>  
 	        <servlet-name>coreServlet</servlet-name>  
-	        <url-pattern>/coreServlet</url-pattern>  
+	        <url-pattern>/coreServlet</url-pattern> 
+	         
 	    </servlet-mapping>  
-	  
+
+	    <servlet-mapping>  
+	        <servlet-name>webTestServlet</servlet-name>  
+	        <url-pattern>/webTestServlet</url-pattern> 
+	         
+	    </servlet-mapping>  
+	    	  
 	    <welcome-file-list>  
 	        <welcome-file>index.jsp</welcome-file>  
 	    </welcome-file-list>  

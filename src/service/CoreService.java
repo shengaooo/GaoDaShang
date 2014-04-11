@@ -1,17 +1,22 @@
 package service;
-import java.util.Date;                         
+import java.util.Date; 
+
+import database.*;                        
+
 import java.util.Map;                          
+
 import javax.servlet.http.HttpServletRequest;  
 
 import org.apache.log4j.Logger;
 
-import dao.UserDB;
-import dao.User; 
 import message.res.TextResponse;
 import ui.menu.*;
 import util.MessageUtil;
 
 public class CoreService {
+	final public static int UPD_ADDR =1; 
+	final public static int UPD_MOB =2; 
+	final public static int FOOD_ORDER_CMD = 3; 
 	
 	static String [] testResponseforMenu = new String [] {"请求处理异常，请稍候尝试！",
 		"全部套餐列表被点击", 
@@ -37,36 +42,68 @@ public class CoreService {
 	static final String testResponseforNewMenu = new String ("D1. 凉瓜牛肉 \n D2. 番茄炒蛋 \n "
 			+ "D3.辣子鸡\n 请您回复餐号和份数， 中间以空格分开");
 	
-	private static String func_M1_AllMenu (User tempUser) {
+	private static String func_M1_AllMenu () {
 		//设置用户当前交易状态
 		//读取所有菜单
 		//返回所有菜单
 		return testResponseforAllMenu;
 	}
 
-	private static String func_M1_Hot (User tempUser) {
+	private static String func_M1_Hot (String tempUser) {
 		//设置用户当前交易状态
 		//读取所有菜单
 		//返回所有菜单
 		return testResponseforHotMenu;
 	}
 	
-	private static String func_M1_MyFav (User tempUser) {
+	private static String func_M1_MyFav (String tempUser) {
 		//设置用户当前交易状态
 		//读取所有菜单
 		//返回所有菜单
 		return testResponseforFavMenu;
 	}	
 	
-	private static String func_M1_New (User tempUser) {
+	private static String func_M1_New (String tempUser) {
 		//设置用户当前交易状态
 		//读取所有菜单
 		//返回所有菜单
 		return testResponseforNewMenu;
 	}	
 
+	public static String func_M1_MyOrder (String userName) {
+		String reply; 
+		User tempUser = User.getUserFromDBbyName(userName);
+		int userID=tempUser.getUserId();
+		reply = PlaceOrder.queryOrder(userID); 
+		return reply;
+	}
+	public static String func_M2_MyAddr (String UserName) {
+		String reply; 
+		User fUser= User.getUserFromDBbyName(UserName);
+
+		String tempAddr=fUser.getUserAddress(); 
+		if (tempAddr.equals(" ")){
+			reply="您的地址为空，请您回复 DZ您的地址 来更新您的地址\n";  
+		} else {
+			reply="您的地址是： "+ tempAddr+"\n 如果您想更新您的地址请回复 DZ您的地址 来更新您的地址\n";
+		}
+		return reply;
+	}		
 	
-	private static String MenuClickProcess (String eventKey, User tempUser){
+	public static String func_M2_MyMob (String UserName) {
+		User fUser= User.getUserFromDBbyName(UserName);
+		String reply; 
+		String tempMob=fUser.getMobileNumber(); 
+		if (tempMob.equals(" ")){
+			reply="您的电话为空，请您回复 DH您的电话 来更新您的电话\n";
+		} else {
+			reply="您的电话为： "+ tempMob+"\n 如果您想更新您的电话请回复  DH您的电话 来更新您的电话\n";
+//			reply="Your mobile is: "+ tempMob+ "\n; pls reply with DH+Mobile to update";
+		}
+		return reply;
+	}	
+	
+	private static String MenuClickProcess (String eventKey, String tempUser){
     	int intKey = 0; 
         // 默认返回的文本消息内容     
         String respContent = testResponseforMenu[0];  
@@ -81,10 +118,11 @@ public class CoreService {
     	switch  (intKey) 
     	{ case MenuClick.M1_AllMenu: 
     		{ 
-    			respContent=func_M1_AllMenu(tempUser);
+    			respContent=func_M1_AllMenu();
     			break; 
     		}
-    	  case MenuClick.M1_Hot:{ 
+    	  case MenuClick.M1_Hot:{
+    		  
 			respContent=func_M1_Hot(tempUser);
 			break; 
 		  }
@@ -96,15 +134,38 @@ public class CoreService {
   			respContent=func_M1_New(tempUser);
   			break; 
   		  }
+    	  case MenuClick.M1_MyOrder: {
+    		 respContent=func_M1_MyOrder(tempUser);
+    		 break; 
+    	  }
+    	  case MenuClick.M2_MyAddr:{
+    		respContent= func_M2_MyAddr(tempUser);
+    		break;
+    	  }
+    	  case MenuClick.M2_MyPhone:{
+    		  respContent=func_M2_MyMob(tempUser);
+    	  }
+    	  
     	}; 
     	return respContent; 
 	}
 	
+	public static int analCmd(String cmd){
+		String cmdUpperCase=cmd.toUpperCase();
+		
+		if (cmdUpperCase.startsWith("DZ")) { 
+			return UPD_ADDR; 
+		} else if (cmdUpperCase.startsWith("DH")) {
+			return UPD_MOB; 
+		} else {
+			return FOOD_ORDER_CMD; 
+		}
+//		return 0; 
+	}
     public static String processRequest(HttpServletRequest request) { 
     	Logger logger = Logger.getLogger(CoreService.class); 
     	
         String respMessage = null, eventKey;
-        User tempUser = null;
         logger.error("We are in processRequest");
         
         try {  
@@ -135,7 +196,6 @@ public class CoreService {
             logger.error("createTime: "+createTime); 
             long createTimeInLong = Long.parseLong(createTime);
             
-            
             // 回复文本消息    
             TextResponse textMessage = new TextResponse();  
             textMessage.setToUserName(fromUserName);  
@@ -147,45 +207,18 @@ public class CoreService {
             // 文本消息      
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {  
 //                 消息内容    
-              String msgContent = requestMap.get("Content").trim();  
+              String msgContent = requestMap.get("Content").trim(); 
+              int cmd= analCmd(msgContent);
+              logger.error("Command after analyse is: "+cmd);
+              
+              switch (cmd) {
+              case UPD_ADDR:{ respContent=func_M2_updAddr(fromUserName, msgContent,cmd); break; }
+              case UPD_MOB:{ respContent=func_M2_updMob(fromUserName, msgContent,cmd); break; }
+              case FOOD_ORDER_CMD: { respContent = func_M1_orderFood(fromUserName,msgContent,cmd); break; }
+              }
               //Log
-              logger.error("msgContent: "+msgContent);    
-            	
-            	tempUser = UserDB.getUser(fromUserName);
-            	if (tempUser == null) {
-            		//This is a new User, display the menu of 0. 
-                    if (msgContent.equals("2")) {
-                    	User newUser = new User (fromUserName); 
-                    	UserDB.addUser(fromUserName, newUser); 
-                    	respContent= MenuClass.getMenu(1);
-                    	newUser.setLastTransTime(createTimeInLong);
-                    	
-//   Don't know why, addUser return null; will try it later. ToDo.                   	
-//                    	if (UserDB.addUser(fromUserName, newUser)){
-//                    		respContent= MenuClass.getMenu(1);  //Menu 1: 要求输入地址
-//                    		newUser.setLastTransTime(createTimeInLong);
-//                    	} else {
-//                    		respContent= MenuClass.getMenu(2);  //Menu2: 数据错误，让用户稍等
-//                    	}
-                    } else {
-                    	respContent = MenuClass.getMenu(3)+ "\n\n"+ MenuClass.getMenu(0); //Menu3: 您还不是注册用户，请您先注册 
-                    }
-            	} else {
-            		if (tempUser.getRegisterState()==0) {
-            			//ToDo: We can check the time btw this action and last action. 
-            			tempUser.setAddress(msgContent);
-            			tempUser.setRegisterState(1);
-            			tempUser.setLastTransTime(createTimeInLong);
-            			respContent = MenuClass.getMenu(4)+msgContent; //Menu 4: 您已注册成功，您的注册地址是: 
-            		} else {
-            			if (msgContent.equals("1")) {
-            				respContent = MenuClass.getMenu(5); 
-            				tempUser.setTransState(1);
-            				tempUser.setLastTransTime(createTimeInLong);
-            			} 
-            		}
-            		
-            	}
+              logger.error("msgContent: "+msgContent);          
+              
             }  
             // 图片消息      
             else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {  
@@ -223,9 +256,8 @@ public class CoreService {
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
                 	
                 	eventKey = requestMap.get("EventKey");  
-                	logger.error("EventKey is: "+eventKey);
-                    	
-                	respContent = MenuClickProcess(eventKey, tempUser); 
+                	logger.error("EventKey is: "+eventKey);                   	
+                	respContent = MenuClickProcess(eventKey, fromUserName); 
 
                 }  
             }  
@@ -238,5 +270,21 @@ public class CoreService {
             e.printStackTrace();  
         }  
         return respMessage;  
-    }  
+    }
+
+	public static String func_M2_updMob(String fromUser, String msgContent, int cmd) {
+		User.updUserInfoToDB(fromUser,msgContent,cmd);
+		return "您已经成功更新手机信息"; 
+	}
+
+	public static String func_M2_updAddr(String fromUser, String msgContent, int cmd) {
+		// TODO Auto-generated method stub
+		User.updUserInfoToDB(fromUser,msgContent,cmd); 
+		return "您已经成功更新您的地址"; 
+	}  
+	
+	public static String func_M1_orderFood(String fromUser, String msgContent, int cmd) {
+		PlaceOrder.processOrder(fromUser, msgContent, cmd);
+		return "您已经成功订餐"; 
+	}
 }

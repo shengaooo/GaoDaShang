@@ -1,5 +1,18 @@
 package database;
 
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
+
+import service.CoreService;
+
 // Generated Mar 21, 2014 4:30:53 PM by Hibernate Tools 4.0.0
 
 /**
@@ -18,6 +31,11 @@ public class User implements java.io.Serializable {
 	public User() {
 	}
 
+	public User(String userName){
+		this.userName=userName;
+		this.userAddress=" ";
+		this.mobileNumber=" ";
+	}
 	public User(String userAddress, String userName, String mobileNumber) {
 		this.userAddress = userAddress;
 		this.userName = userName;
@@ -89,5 +107,88 @@ public class User implements java.io.Serializable {
 	public void setUserPaid(Double userPaid) {
 		this.userPaid = userPaid;
 	}
+	
+	public static User getUserFromDBbyName(String userName){
+		Logger logger = Logger.getLogger(User.class);
+		User tempUser=null;
+		
+		Configuration configuration = new Configuration().configure();   
+		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();  
+	    SessionFactory sf = configuration.buildSessionFactory(serviceRegistry);  
+	    Session ss=sf.openSession();
+	    Transaction ts= ss.beginTransaction();
+	    Query q=ss.createQuery("from User where UserName ='"+userName+"'");  
+	    List qList=q.list();
+	    ts.commit();
+	    int qListSize=qList.size();
+	    switch (qListSize){
+	    case 0: {
+	        //No user found; this is a new user;
+	    	logger.error("New User with name: "+userName);
+	    	 tempUser= new User(userName);
+	    	 ts=ss.beginTransaction();
+	    	 ss.save(tempUser);
+	    	 ts.commit();
+	    	 break;
+	    }
+	    case 1: {
+	    	//We get only user this is normal;
+	    	logger.error("Found one User with name: "+userName);
+	    	tempUser=(User) qList.get(0);
+	    	break;
+	    }
+	    default: {
+	    	//We got multiple users with userName; some error in DB
+	    	logger.error("Found multiple Users with name: "+userName 
+	    			+ "and "+qListSize+" users");
+	    	tempUser=(User)qList.get(0);
+	    }
+	    }
+		return tempUser;
+		
+	}
 
+	public static void updUserInfoToDB(String userName, String msgContent, int type) {
+		Logger logger = Logger.getLogger(User.class);
+		User tempUser=null;
+		
+		Configuration configuration = new Configuration().configure();   
+		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();  
+	    SessionFactory sf = configuration.buildSessionFactory(serviceRegistry);  
+	    Session ss=sf.openSession();
+	    Transaction ts= ss.beginTransaction();
+	    Query q=ss.createQuery("from User where UserName ='"+userName+"'");  
+	    List qList=q.list();
+	    ts.commit();
+	    int qListSize=qList.size();
+	    ts= ss.beginTransaction();
+	    switch (qListSize){
+	    case 0: {
+	        //No user found; this is a new user;
+	    	logger.error("New User with name: "+userName);
+	    	 tempUser= new User(userName);
+	    	 break;
+	    }
+	    case 1: {
+	    	//We get only user this is normal;
+	    	logger.error("Found one User with name: "+userName);
+	    	tempUser=(User) qList.get(0);	    	
+	    	break;
+	    }
+	    default: {
+	    	//We got multiple users with userName; some error in DB
+	    	logger.error("Found multiple Users with name: "+userName 
+	    			+ "and "+qListSize+" users");
+	    	tempUser=(User)qList.get(0);
+	    }
+	    }	 
+	    if (type==CoreService.UPD_ADDR){
+	    	tempUser.setUserAddress(msgContent.substring(2).trim());
+	    } else if (type==CoreService.UPD_MOB){
+	    	tempUser.setMobileNumber(msgContent.substring(2).trim());
+	    }
+   	    
+   	    ss.save(tempUser);
+   	    ts.commit();
+	}
 }
