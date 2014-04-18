@@ -9,9 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
+import pojo.AccessToken;
+import pojo.PushMsgText;
+import pojo.TextContent;
 import message.res.TextResponse;
 import ui.menu.*;
 import util.MessageUtil;
+import util.WeixinUtil;
 
 public class CoreService {
 	final public static int UPD_ADDR =1; 
@@ -286,5 +290,13 @@ public class CoreService {
 	public static String func_M1_orderFood(String fromUser, String msgContent, int cmd) {
 		PlaceOrder.processOrder(fromUser, msgContent, cmd);
 		return "您已经成功订餐"; 
+	}
+	
+	public static int func_pushTxtMsg( String fromUser, String msgContent){
+		String tempToken=AccessToken.getToken(); 
+		TextContent tc=new TextContent (msgContent); 
+		PushMsgText pmt=new PushMsgText(fromUser, tc); 
+		int result = WeixinUtil.sendMsg(pmt, tempToken);  
+		return result; 
 	}
 }

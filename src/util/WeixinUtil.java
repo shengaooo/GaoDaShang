@@ -5,24 +5,18 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;  
 import java.net.ConnectException;  
 import java.net.URL;  
-  
-
-
-
 import javax.net.ssl.HttpsURLConnection;  
 import javax.net.ssl.SSLContext;  
 import javax.net.ssl.SSLSocketFactory;  
 import javax.net.ssl.TrustManager;  
-  
-
-
-
+import logintest.CoreServlet;
+import org.apache.log4j.Logger;
 import pojo.AccessToken;
 import pojo.Menu;
+import pojo.PushMsgToUser;
+import service.CoreService;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;  
-
- 
 
 public class WeixinUtil {
 	public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type="
@@ -30,6 +24,9 @@ public class WeixinUtil {
 	
 	public static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token="
 			+ "ACCESS_TOKEN";
+	
+	public static String push_msg_url ="https://api.weixin.qq.com/cgi-bin/message/custom/"
+			+ "send?access_token=ACCESS_TOKEN"; 
 	
 	/** 
 	 	     * 发起https请求并获取结果 
@@ -62,8 +59,14 @@ public class WeixinUtil {
 
             httpUrlConn.setRequestMethod(requestMethod);  
   
-            if ("GET".equalsIgnoreCase(requestMethod))  
-                httpUrlConn.connect();  
+            if ("GET".equalsIgnoreCase(requestMethod)) {
+            	httpUrlConn.connect();
+            } else if ("POST".equalsIgnoreCase(requestMethod)){
+            	httpUrlConn.connect();
+            }
+                  
+            
+            
   
             //当有数据需要提交时   
             if (null != outputStr) {  
@@ -100,6 +103,9 @@ public class WeixinUtil {
     //获取access_token 
 	public static AccessToken getAccessToken(String appid, String appsecret) {  
 	    AccessToken accessToken = null;  
+	    
+        Logger logger = Logger.getLogger(WeixinUtil.class);	 
+        logger.error("Get Access Token is called");
 	  
 	    String requestUrl = access_token_url.replace("APPID", appid).replace("APPSECRET", appsecret);  
 	    JSONObject jsonObject = httpRequest(requestUrl, "GET", null);  
@@ -107,8 +113,10 @@ public class WeixinUtil {
 	    if (null != jsonObject) {  
 	        try {  
 	            accessToken = new AccessToken();  
-	            accessToken.setToken(jsonObject.getString("access_token"));  
-	            accessToken.setExpiresIn(jsonObject.getInt("expires_in"));  
+	            accessToken.setToken(jsonObject.getString("access_token")); 
+	            int expires_in=jsonObject.getInt("expires_in");
+	            accessToken.setExpiresIn(expires_in); 
+	            accessToken.setExpiresDate(expires_in);
 	        } catch (JSONException e) {  
 	            accessToken = null;  
 	            // ??token??   
@@ -136,4 +144,22 @@ public class WeixinUtil {
 	    } 
 	    return result;  
 	}  
+	
+	public static int sendMsg(PushMsgToUser msg, String accessToken) {
+		Logger logger = Logger.getLogger(WeixinUtil.class); 
+	    String url = push_msg_url.replace("ACCESS_TOKEN", accessToken);  
+	    int result=0; 
+	    String jsonMsg = JSONObject.fromObject(msg).toString();  
+	    logger.error("The JSON Message is: "+jsonMsg);
+	    
+	    JSONObject jsonObject = httpRequest(url,"POST",jsonMsg); 
+	    
+	    if (null != jsonObject) {  
+	        if (0 != jsonObject.getInt("errcode")) {  
+	            result = jsonObject.getInt("errcode");  
+	            logger.error("Error code is: "+result + "Error Message is: "+jsonObject.getString("errmsg")); 
+	        }  
+	    } 
+	    return result;  
+	}
 }
