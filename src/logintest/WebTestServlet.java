@@ -68,7 +68,6 @@ public class WebTestServlet extends HttpServlet {
 
         } else if (method.equalsIgnoreCase("sendMsg")){
         	String message = request.getParameter("Message");
-        	AccessToken.setToken(message); 
         	
         	int result= CoreService.func_pushTxtMsg(userName, message); 
         } else if (method.equalsIgnoreCase("addr")){        	

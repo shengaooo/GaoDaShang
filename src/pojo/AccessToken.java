@@ -8,6 +8,7 @@ public class AccessToken {
     private static Date obsDate; 
   
     public static String getToken() {
+    	//TODO we need check if the Token is expired.
         return token;  
     }  
   

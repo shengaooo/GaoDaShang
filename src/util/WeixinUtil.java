@@ -13,7 +13,7 @@ import logintest.CoreServlet;
 import org.apache.log4j.Logger;
 import pojo.AccessToken;
 import pojo.Menu;
-import pojo.PushMsgToUser;
+import pojo.PushTxtMsgToUser;
 import service.CoreService;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;  
@@ -145,7 +145,7 @@ public class WeixinUtil {
 	    return result;  
 	}  
 	
-	public static int sendMsg(PushMsgToUser msg, String accessToken) {
+	public static int sendMsg(PushTxtMsgToUser msg, String accessToken) {
 		Logger logger = Logger.getLogger(WeixinUtil.class); 
 	    String url = push_msg_url.replace("ACCESS_TOKEN", accessToken);  
 	    int result=0; 

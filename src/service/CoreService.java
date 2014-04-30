@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 
 import pojo.AccessToken;
-import pojo.PushMsgText;
-import pojo.TextContent;
+import pojo.TextMsg;
+import pojo.PushTxtMsgToUser;
 import message.res.TextResponse;
 import ui.menu.*;
 import util.MessageUtil;
@@ -21,7 +21,9 @@ public class CoreService {
 	final public static int UPD_ADDR =1; 
 	final public static int UPD_MOB =2; 
 	final public static int FOOD_ORDER_CMD = 3; 
-	
+
+	private static String orderReceiver="om62PuBuL9G9jmDOKx2a8XtGWFqw";  //Once we get an order, the message will be sent to this WX Account. 
+
 	static String [] testResponseforMenu = new String [] {"请求处理异常，请稍候尝试！",
 		"全部套餐列表被点击", 
 		"我常吃的套餐 被点击",
@@ -289,13 +291,21 @@ public class CoreService {
 	
 	public static String func_M1_orderFood(String fromUser, String msgContent, int cmd) {
 		PlaceOrder.processOrder(fromUser, msgContent, cmd);
+		String msgToRes = "刚收到客户订单，订单的内容如下：\n";
+		msgToRes += msgContent; 
+		
+		User fUser= User.getUserFromDBbyName(fromUser);
+		
+		msgToRes += "\n 客户地址是:"+fUser.getUserAddress()+"  客户电话是"+ fUser.getMobileNumber()+"\n"; 
+		
+		func_pushTxtMsg(orderReceiver, msgToRes); 
 		return "您已经成功订餐"; 
 	}
 	
 	public static int func_pushTxtMsg( String fromUser, String msgContent){
 		String tempToken=AccessToken.getToken(); 
-		TextContent tc=new TextContent (msgContent); 
-		PushMsgText pmt=new PushMsgText(fromUser, tc); 
+		TextMsg text = new TextMsg(msgContent); 
+		PushTxtMsgToUser pmt=new PushTxtMsgToUser(fromUser, text); 
 		int result = WeixinUtil.sendMsg(pmt, tempToken);  
 		return result; 
 	}
